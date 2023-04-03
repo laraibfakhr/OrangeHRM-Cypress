@@ -11,6 +11,12 @@
   "dependencies": {
     "chai": "^4.3.7",
     "cypress": "^12.8.1",
-    "neat-csv": "^5.2.0"
+    "faker": "^5.5.3",
+    "neat-csv": "^5.2.0",
+    "random-email": "^1.0.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/faker": "^6.6.9"
   }
 }
