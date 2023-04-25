@@ -28,22 +28,51 @@ it('Verify users are adding successfully',()=>{
     .click()
 
     adduser.AddUserbutton()
+    
+})
 
-    /* ==== Generated with Cypress Studio ==== */
-    cy.get('.oxd-button--ghost').click();
-    cy.get(':nth-child(2) > .oxd-input').clear('e');
-    cy.get(':nth-child(2) > .oxd-input').type('emailrandom');
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click();
-    cy.get('.oxd-form-actions > .oxd-button--secondary').click();
-    cy.get('.oxd-table-cell-actions > :nth-child(2) > .oxd-icon').click();
-    cy.get('.oxd-button--ghost').click();
-    cy.get('.oxd-topbar-body-nav > ul > :nth-child(2)').click();
-    cy.get(':nth-child(1) > .oxd-topbar-body-nav-tab-link').click();
-    cy.get('.oxd-button > .oxd-icon').click();
-    cy.get(':nth-child(2) > .oxd-input').clear('S');
-    cy.get(':nth-child(2) > .oxd-input').type('Software Engineer 2');
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-textarea').click();
-    cy.get('.oxd-button--secondary').click();
-    /* ==== End Cypress Studio ==== */
+it.only('Verify the child ',()=>{
+    loginpage.Username('Admin')
+    loginpage.Password('admin123')
+    loginpage.LoginButton()
+    cy.get(':nth-child(9) > .oxd-main-menu-item').click()
+
+
+    // cy.get('.orangehrm-container').find('.oxd-table-body').each(($e1,index,$list)=>{
+    //     const nameText = $e1.find('.oxd-table-cell oxd-padding-cell').text()
+    //     if(nameText.includes('Anthony Nolan')){
+    //        cy.wrap($e1).find('.oxd-icon bi-trash').click()
+    //     }
+    // })
+
+    // cy.get('.orangehrm-container').find('.oxd-table').each(($e1,index,$list)=>{
+    //     const nameText=$e1.find('.oxd-table-body').text()
+       
+    //     if(nameText.includes('2023-04-10'))
+    //     {
+    //         cy.wrap($e1).find('.oxd-table-cell oxd-padding-cell').click()
+    //       //  cy.log(nameText)
+    //     }
+    // })
+
+    cy.get('.orangehrm-container').find('.oxd-sheet').each(($el,index,$list)=>{
+        //cy.wait(5000)
+        var directory= $el.find('.oxd-sheet > .orangehrm-directory-card-header').text()
+        
+        if($el.text().includes('Linda')) //I wrote directory.include but that didnt work
+        {         
+            cy.wrap($el).click()
+        }
+    //   
+    })
+    cy.get('.orangehrm-corporate-directory-sidebar > .oxd-grid-item > .oxd-sheet > .orangehrm-directory-card-header').contains('Linda Jane Anderson')
+
+    cy.get('.orangehrm-corporate-directory-sidebar > .oxd-grid-item > .oxd-sheet > .orangehrm-directory-card-subtitle').then(function(title){
+        cy.log(title.text())
+        //text() is the jquery method
+ 
+    })
+
+    
 })
 
