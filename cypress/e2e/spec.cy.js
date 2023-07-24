@@ -56,7 +56,7 @@ describe('UI TEST CASES', () => {
     //Verify the user input in the fields on the contact popup works fine
     cy.get('#recipient-email').type("test.com")
     cy.get('#recipient-name').type("TEST QA")
-    cy.get('#message-text').type("Hello! Test message.")
+    cy.get('#message-text').type("Hello Test message.")
     cy.get('#exampleModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
 
     //Verify the returned API status is 200
