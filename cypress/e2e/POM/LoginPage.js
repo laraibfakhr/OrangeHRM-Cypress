@@ -17,7 +17,7 @@ export class LoginPage{
 
     LoginFooter(){
         cy.get('.orangehrm-copyright-wrapper > :nth-child(1)').contains('OrangeHRM OS 5.5')
-        cy.get('.orangehrm-copyright-wrapper > :nth-child(2)').contains('© 2005 - 2023')
+        cy.get('.orangehrm-copyright-wrapper > :nth-child(2)').contains('© 2005 - 2024')
     }
     
     ForgotPassword(){

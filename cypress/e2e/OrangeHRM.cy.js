@@ -42,7 +42,7 @@ it('Verify the child Directory user',()=>{
     directory.CheckDirectory()
 })
 
-it.only('Verify the Search Bar',()=>{
+it('Verify the Search Bar',()=>{
     loginpage.Username('Admin')
     loginpage.Password('admin123')
     loginpage.LoginButton()

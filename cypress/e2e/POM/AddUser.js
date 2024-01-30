@@ -48,6 +48,11 @@ JobDropdown(){
 
             cy.get('.orangehrm-header-container > .oxd-text').contains('Employment Status')
         }
+        cy.get('.--visited > .oxd-topbar-body-nav-tab-item').click()
+        cy.get('.oxd-dropdown-menu > :nth-child(1)').contains('Job Titles')
+        cy.get('.oxd-dropdown-menu > :nth-child(2)').contains('Pay Grades')
+        cy.get('.oxd-dropdown-menu > :nth-child(4)').contains('Job Categories')
+        cy.get('.oxd-dropdown-menu > :nth-child(5)').contains('Work Shifts')
 
     })   
 
@@ -59,4 +64,4 @@ MoreDropdown(){
     cy.get('.oxd-dropdown-menu').contains('Social Media Authentication').click()
     cy.get('.oxd-text--h4').contains('Launching Soon')
 }
-}
+ }
